@@ -10,10 +10,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>fw.zuul</groupId>
+    <groupId>com.gchen</groupId>
     <artifactId>demo_zuul</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>fw_zuul</name>
+    <name>demo_zuul</name>
     <description>Zuul服务</description>
 
     <properties>

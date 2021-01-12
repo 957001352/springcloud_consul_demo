@@ -1,6 +1,6 @@
 debug: true
 server:
-  port: 90
+  port: 100
   tomcat:
     max-threads: 500
 #  ssl:
@@ -10,7 +10,7 @@ server:
 #    key-alias: tomcat
 spring:
   application:
-    name: dhlk-zuul
+    name: demo-zuul
   cloud:
     consul:
       host: 127.0.0.1
@@ -30,9 +30,13 @@ zuul:
   ignored-services: "*"
   sensitive-headers:
   routes:
-    fw-web:
-      path: /fw-web/**
-      serviceId: fw-web #web展示服务
+    demo-web:
+      path: /demo-web/**
+      serviceId: demo-web #web展示服务
+      sensitiveHeaders: "*"
+    demo-service:
+      path: /demo-service/**
+      serviceId: demo-service #web展示服务
       sensitiveHeaders: "*"
     jsonserver:
       path: /json/**
